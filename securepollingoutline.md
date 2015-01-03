@@ -1,6 +1,6 @@
 ###Secure Polling System overview and TODO list
 
-1.  Glossary (as used to discuss the Secure Polling System)
+<ol><li>Glossary (as used to discuss the Secure Polling System)
 
   1.  Secure Polling System = the system described here, which allows for
       unmediated polling of unlimited issues, using strong cryptography to
@@ -55,7 +55,7 @@
       registrar, of the public key of a voter. (this involves RSA
       blinding, so the registrar never sees the voter's public key)
 
-2.  What it does
+</li><li>What it does
 
   1.  gives each voter total control over what they say and when they say
       it
@@ -65,11 +65,11 @@
       day
   4.  5.   
 
-3.  How it works
+</li><li>How it works
 
   1.  software the voter uses
 
-4.  What the voter does
+</li><li>What the voter does
 
   1.  voter learns about system and downloads an app, which contains all
       tools and a nice UI.  (some users will go to a website to do it and
@@ -91,7 +91,7 @@
       with tally list viewer and use the sorted results (or the screed of
       a friend with similar politics) to start their own screed.  Finally,
 
-5.  Components list
+</li><li>Components list
 
   1.  GNUK = open-hardware USB device, which (generates and) holds the
       present (and only) private key used by the registrar.
@@ -138,3 +138,4 @@
       since this is how we watch for uniqueness of screed authors and
       merge screeds appearing with the same pubkey.
 
+</li></ol>
