@@ -15,28 +15,30 @@
       expressing a belief, desire or opinion in the context of a voters'
       authority as a member of a democracy, for example:
 
-    1.  “End all sales tax”
-    2.  “End all sales tax!!!”
-    3.  “Double all sales tax”
-    4.  “Make the public transportation run all night”
-    5.  “The mayor should step down immediately and a new election
+<ol><li>“End all sales tax”
+</li><li>“End all sales tax!!!”
+</li><li>“Double all sales tax”
+</li><li>“Make the public transportation run all night”
+</li><li>“The mayor should step down immediately and a new election
     scheduled”
+</li></ol>
 
 </li><li>screed = a list of opinions a voter has chosen to express, with
     each opinion on its own line
 </li><li>registrar = an official (or office) who is trusted or oathed to do
     the following:
 
-    1.  maintain 12 key pairs (a new one each month, expiring 12 months
+<ol><li>maintain 12 key pairs (a new one each month, expiring 12 months
         later)
-    2.  determine eligibility of persons claiming to be voters (and checking
+</li><li>determine eligibility of persons claiming to be voters (and checking
     their ID)
-    3.  “sign” a binary blob (a blinded public key) for eligible persons
+</li><li>“sign” a binary blob (a blinded public key) for eligible persons
          with latest key
-    4.  record the date and identity of persons' binary blob being signed
-    5.  prevent persons getting signed again before their previous signature
+</li><li>record the date and identity of persons' binary blob being signed
+</li><li>prevent persons getting signed again before their previous signature
         expires
-    6.  publish public keys for all key pairs at all times
+</li><li>publish public keys for all key pairs at all times
+</li></ol>
 
 </li><li>signed screed = a voter's screed, signed using their private key,
       and posted publicly along with their public key (for verification of
@@ -97,18 +99,20 @@
 <ol><li>GNUK = open-hardware USB device, which (generates and) holds the
       present (and only) private key used by the registrar.
 
-    1.  Contains private key and NEVER exports it (it actually can't)
-    2.  does all signing operations internally
-    3.  modified to have an odometer-like counter, an LED, and a physical
+<ol><li>Contains private key and NEVER exports it (it actually can't)
+</li><li>does all signing operations internally
+</li><li>modified to have an odometer-like counter, an LED, and a physical
         button
-    4.  registrar has to physically press button at time of signing
-    5.  signing causes numeric counter to increment, preventing fraud
+</li><li>registrar has to physically press button at time of signing
+</li><li>signing causes numeric counter to increment, preventing fraud
+</li></ol>
 
 </li><li>keymanager = key management software for the registrar's office
 
-    1.  talks to GNUK device when signing blobs for voters
-    2.  keeps track of key pairs and posts public keys to official website
-    3.  makes crypo usable by non computer-scientists for these tasks
+<ol><li>talks to GNUK device when signing blobs for voters
+</li><li>keeps track of key pairs and posts public keys to official website
+</li><li>makes crypo usable by non computer-scientists for these tasks
+</li></ol>
 
 </li><li>screed editor / tally spider = actually one program.  For a voter to
       edit their screed they want to be able to start with a list of
