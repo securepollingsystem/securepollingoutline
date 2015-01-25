@@ -130,11 +130,21 @@
 </li><li>makes crypo usable by non computer-scientists for these tasks
 </li></ol>
 
-</li><li>screed editor / tally spider = actually one program.  For a voter to
-      edit their screed they want to be able to start with a list of
-      screeds already in-use by other people.  Since exact wording and
-      spelling improve the system, voters benefit from copying existing
-      opinions which are like memes.
+</li><li>tally spider = a program which runs on a server or EC2 instance
+      and crawls all the URLs it can find which contain signed screeds.
+      It collates the opinions it finds by the public key signing them.
+      Its output is called a tally spider list and is web-accessible,
+      so that people who need the data but don't want to run their own
+      tally spider can get a predigested tally from someone they trust.
+</li><li>tally spider list = this is a file, created by a tally spider,
+      containing all the signed screeds found by a tally spider in a
+      specific search.  each screed record includes the time it was
+      accessed, an indication of whether both its signatures was verified,
+      and an MD5 or SHA1 checksum of the record (so that pages which have
+      not changed don’t have to be verified again if the MD5 matches).
+      The record also includes the fingerprint of the voter’s public key,
+      since this is how we watch for uniqueness of screed authors and
+      merge screeds appearing with the same pubkey.
 </li><li>tally list viewer = a program for viewing a tally spider list.
       It allows the user to subjectively group functionally identical
       opinions for purposes of interpreting opinion data.  In practice
@@ -149,15 +159,14 @@
       pubkey fingerprints.  For each fingerprint, each opinion can only be
       counted once, even if that voter lists it multiple times in one or
       multiple posted screeds.
-</li><li>tally spider list = this is a file, created by a tally spider,
-      containing all the signed screeds found by a tally spider in a
-      specific search.  each screed record includes the time it was
-      accessed, an indication of whether both its signatures was verified,
-      and an MD5 or SHA1 checksum of the record (so that pages which have
-      not changed don’t have to be verified again if the MD5 matches).
-      The record also includes the fingerprint of the voter’s public key,
-      since this is how we watch for uniqueness of screed authors and
-      merge screeds appearing with the same pubkey.
+</li><li>screed editor = For a voter to edit their screed they want to
+      be able to start with a list of opinions already in-use by other
+      people.  Since exact wording and spelling are very important,
+      voters benefit from copying existing opinions which are like memes.
+      The screed editor lets the voter compare their screed with opinions
+      found in a tally list, copying popular opinions that they agree with.
+      Of course voters can also type in any opinion they want, which is
+      how all popular opinions begin.
 </li></ol>
 
 </li></ol>
