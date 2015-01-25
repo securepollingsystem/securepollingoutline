@@ -56,8 +56,8 @@
 </li><li>signature of public key = a detached signature, made by the
       registrar, of the public key of a voter. (this involves RSA
       blinding, so the registrar never sees the voter's public key)
-
-</li><li>What it does
+</li></ol>
+<li><ol>What it does
 
 <li>gives each voter total control over what they say and when they say
       it
@@ -65,11 +65,27 @@
       they like
 </li><li>annual registration is quick and easy and can happen any convenient
       day
-</li></ol>
+</li><li>anyone can count the number of people agreeing with each opinion,
+      at any time and with independant verification</ol>
 
 </li><li>How it works
 
-<ol><li>software the voter uses</li></ol>
+<ol><li>using cryptographic signatures, lists of opinions from each voter
+      can be proven traceable to a unique voter vetted by the registrar.
+</li><li>anyone can use a tally spider (written in Golang) to curl all the
+      signed screeds they can find on the net, and collate them by pubkey
+</li><li>tally spider lists produced by spiders are shared publicly for 
+      people who don't want to run a tally spider for themselves.
+</li><li>voters use a program (in javascript, immobilized by hyperboot to
+      prevent changes) to view opinions from a tally list and compare them
+      with their own screed.  They can copy opinions from the tally list
+      into their own screed (or compose new ones) and sign,save,post their
+      updated signed screed.
+</li><li>an advanced client for analyzing tally lists lets a person group
+      functionally equivalent opinions for counting how many unique voters
+      express an arbitrary position.  This is geared toward journalists and
+      politicians who need to show and know the real meaning of counts.
+</ol>
 
 </li><li>What the voter does
 
