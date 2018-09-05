@@ -1,0 +1,23 @@
+Q: When the project is built, who pays the registrar?
+A: great questions.  The registrar's job is to know who is eligible to participate in their instance of SPS, and to maintain signing keys, maintain records of whose (blinded) keys have been signed and when, and to publish their public keys, and showing up for appointments to sign keys.  Whether they do that for pay or voluntarily is not defined by the software.  Examples could include the following:
+1. The head librarian of a small town accepts the suggestion of local hackers to be the registrar for the town. She is trusted by almost everyone, so it's a good idea.
+2. The City Council of Berkeley resolves to hire a person who happens to be a lawyer and notary public to perform the job of Registrar, with lots of paperwork, and it's all very official.
+3. The elder council of the Droob community decides to run SPS, and they know who their people are and hand out signatures appropriately.
+
+Q: Who will check the background of the registrar?
+A: The selection of the registrar ultimately comes down to the people participating in the system and those evaluating the data coming from it.  I could volunteer to be the registrar for Oakland, but there are probably better choices who would be trusted by a larger percentage of the city.  Ultimately, the trust in the registrar will probably have a lot to do with how seriously people take the system (until they understand it better in the future).  Assuming that the records of whose blob is signed by the registrar (and which month) are public, there's not a lot that the registrar can do wrong without people noticing and raising a fuss (and replacing them)
+
+Q: Who supplies the office of the registrar?
+A: This is Free Software, so the software can be acquired by the registrar (or anyone) for free.  As for the computer, server space, internet connection, chair and desk of the registrar, these are outside the scope of developing the software.  If such activities are going to be part of a grant proposal timeline, they should come later, once the software is functional
+
+Q: Will the Grant cover implementing the Secure Polling System?
+Q: If so will we our team be implementing it?
+Q: What is the intended implementation area? Oakland? All of the USA?
+That's a good question and i haven't figured out the right answer for the first attempts yet. I think we need to pick something that doesn't box in the software with a particular political bent:  for example, Berkeley is a "liberal" bastion, so it's not the best choice because people will assume the software is inherently biased.  Richmond has less of a problematic representation, but we should probably come up with a testing ground before approaching something so big.  Eventually, I hope that SPS will be used in many communities around the world, and someday either it or something better will be used globally.
+
+Q: What is the estimated Percentage completion of each of the four Project components?
+we can get more specific as to how much work and how many steps are required to complete all these different components, but i can tell you that the order of complexity is:
+1. Voter software is the most complex (blinding & appointment coordination, signing, displaying & querying data from Vote Counter)
+2. Registrar software is 2nd most complex (blinding & appointment coordination, signing, public key hosting)
+3. Vote Counter is 3rd most complex (public key gathering, signature checking, database with complex query API)
+4. Poll Storage Server is least complex (public key gathering, signature checking, database with simple API)
